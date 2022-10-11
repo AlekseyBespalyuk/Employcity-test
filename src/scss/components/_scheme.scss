@@ -1,0 +1,78 @@
+.scheme {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(10, 1fr);
+  margin-bottom: 80px;
+  gap: 30px;
+
+  &__item {
+    grid-column: 2 span;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      width: 110px;
+      height: 6px;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(65px);
+      background-image: url(../img/dots.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(5)::after {
+      content: none;
+    }
+
+    @include tablet {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__circle {
+    @include flex-all-center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--dark-blue-color);
+    background-color: var(--blue-color);
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+    fill: var(--light-color);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,32 @@
+.order {
+  background-image: url(../img/order-bg.jpg);
+  @include bg-cover;
+
+  &__container {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--light-color);
+    margin-bottom: 30px;
+
+    &_accent {
+      color: var(--blue-color);
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--light-gray-color);
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  // base
+  --font-family: "Lato", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --black-color: #000;
+  --blue-color: #3e9cdc;
+  --nav-active-color: #43abf0;
+  --dark-blue-color: #286690;
+  --gray-color: #6f6d7b;
+  --light-gray-color: #bbb;
+  --form-hover-color: rgba(61, 64, 80, 0.85);
+  --form-text-color: #272733;
+  --scroll-track-color: #3d4050;
+  --footer-pay-color: #c3c3c3;
+  --burger-color: #10101d;
+}

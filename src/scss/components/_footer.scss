@@ -1,0 +1,120 @@
+.footer {
+  background-color: var(--scroll-track-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__container {
+    @include flex-all-sb;
+    gap: 40px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  &__copy {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--light-color);
+
+    @include tablet {
+      width: 100%;
+      order: 2;
+      text-align: center;
+    }
+  }
+
+  .pay {
+    @include flex-all-center;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 38px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 1px;
+      height: 18px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--footer-pay-color);
+
+      @include tablet {
+        height: 1px;
+        width: 36px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &::before {
+      left: 0;
+
+      @include tablet {
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &::after {
+      right: 0;
+
+      @include tablet {
+        right: 50%;
+        top: calc(100% + 15px);
+        transform: translateX(50%);
+      }
+    }
+
+    &__item {
+      @include flex-v-center;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--footer-pay-color);
+      margin-left: 10px;
+    }
+
+    @include tablet {
+      width: 100%;
+      order: 1;
+      padding: 0;
+    }
+  }
+
+  .contact {
+    @include flex-all-center;
+    gap: 38px;
+
+    &__item {
+      @include flex-v-center;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--light-color);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--nav-active-color);
+      }
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      fill: var(--blue-color);
+      margin-right: 10px;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

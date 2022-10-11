@@ -1,0 +1,58 @@
+.burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover &__line {
+    background-color: var(--nav-active-color);
+  }
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: var(--light-color);
+    height: 2px;
+    width: 26px;
+    transform: translate(-50%, -50%);
+
+    &:first-child {
+      margin-top: -8px;
+    }
+
+    &:last-child {
+      left: 9px;
+      margin-top: 8px;
+      width: 13px;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.burger-close {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 8px;
+  right: var(--container-offset);
+  background-image: url(../img/close.svg);
+  background-position: center;
+  background-size: 22px 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu--active {
+  .burger-close {
+    display: block;
+  }
+}
